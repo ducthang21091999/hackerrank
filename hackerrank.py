@@ -63,8 +63,12 @@ def find_percentage():
     ans = statistics.mean(query_scores)
     print('%.2f' %(ans))
 
-
+#Designer Door Mat
+def door_mat():
+    n, m = map(int,input().split())
+    pattern = [('.|.'*(2*i + 1)).center(m, '-') for i in range(n//2)]
+    print('\n'.join(pattern + ['WELCOME'.center(m, '-')] + pattern[::-1]))
 
 
 if __name__ == '__main__':
-    find_percentage()
+    door_mat()
