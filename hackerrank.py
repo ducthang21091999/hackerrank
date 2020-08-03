@@ -69,6 +69,12 @@ def door_mat():
     pattern = [('.|.'*(2*i + 1)).center(m, '-') for i in range(n//2)]
     print('\n'.join(pattern + ['WELCOME'.center(m, '-')] + pattern[::-1]))
 
-
+#Print_formatter
+def print_formatted():
+    n = int(input())
+    width = len("{0:b}".format(n))
+    for i in range(1,n+1):
+        print ("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i, width=width))
+ 
 if __name__ == '__main__':
-    door_mat()
+    print(2**65000)
